@@ -75,12 +75,12 @@ function App() {
   };
 
   useEffect(() => {
-    setTimeout(setImage1, randTime(10), images.avocado);
-    setTimeout(setImage2, randTime(10), images.avocado);
-    setTimeout(setImage3, randTime(10), images.avocado);
-    setTimeout(setImage4, randTime(10), images.avocado);
-    setTimeout(setImage5, randTime(10), images.avocado);
-  }, []);
+    setTimeout(() => setImage1(images.avocado), randTime(10));
+    setTimeout(() => setImage2(images.avocado), randTime(10));
+    setTimeout(() => setImage3(images.avocado), randTime(10));
+    setTimeout(() => setImage4(images.avocado), randTime(10));
+    setTimeout(() => setImage5(images.avocado), randTime(10));
+  }, [images.avocado]);
 
   const click2 = () => {
     setMinutes(2);
